@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang=zh>
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=Cache-Control content="no-cache, no-store, must-revalidate">
+    <meta http-equiv=Pragma content=no-cache>
+    <meta http-equiv=Expires content=0>
+    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>漂亮得不像实力派</title>
+    <link rel=stylesheet href="./css/style.css">
+    <script>
+        (function () {
+            var mobilecheck = function () {
+                if (navigator.userAgent.match(/Android/i)
+                        || navigator.userAgent.match(/webOS/i)
+                        || navigator.userAgent.match(/iPhone/i)
+                        || navigator.userAgent.match(/iPad/i)
+                        || navigator.userAgent.match(/iPod/i)
+                        || navigator.userAgent.match(/BlackBerry/i)
+                        || navigator.userAgent.match(/Windows Phone/i)
+                ) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            var isWechat = function () {
+                var ua = navigator.userAgent.toLowerCase();
+                return /micromessenger/.test(ua);
+            };
+
+            if (!mobilecheck()) {
+                //window.location.href = 'http://piaoliang.smartisan.com/';
+            } else if (!isWechat()) {
+                //window.location.href = 'http://piaoliang.smartisan.com/proudm/static/weixin.html';
+            }
+
+        })();
+    </script>
+</head>
+<body>
+<div class=edit_area>
+    <form><h3><i class="number number1"></i><span>请上传人物照片</span></h3>
+
+        <div class=img><i>请选择图片</i>
+
+            <div class=upload>
+                <div><input type='file' name='image' accept='image/*' class=upload_bg></div>
+                <div class=loadingico></div>
+                <div class=reload><img
+                        src=http://static.smartisanos.cn/marketing/piaoliang/proudm/asset1441618931844/img/reload.png>换一张
+                </div>
+                <div class=edit><img
+                        src=http://static.smartisanos.cn/marketing/piaoliang/proudm/asset1441618931844/img/edit.png>调整图片
+                </div>
+            </div>
+        </div>
+        <h3><i class="number number2"></i><span>请选择文案颜色</span></h3>
+
+        <div class=colors><span><input type=radio id=color_red name=color class=color value=1 checked> <b class=red></b> <label
+                for=color_red></label></span> <span><input type=radio id=color_orange name=color class=color value=2> <b
+                class=orange></b> <label for=color_orange></label></span> <span><input type=radio id=color_yellow
+                                                                                       name=color class=color
+                                                                                       value=3> <b
+                class=yellow></b> <label for=color_yellow></label></span> <span><input type=radio id=color_green
+                                                                                       name=color class=color
+                                                                                       value=4> <b
+                class=green></b> <label for=color_green></label></span> <span><input type=radio id=color_cyan name=color
+                                                                                     class=color value=5> <b
+                class=cyan></b> <label for=color_cyan></label></span> <span><input type=radio id=color_blue name=color
+                                                                                   class=color value=6> <b
+                class=blue></b> <label for=color_blue></label></span> <span><input type=radio id=color_purple name=color
+                                                                                   class=color value=7> <b
+                class=purple></b> <label for=color_purple></label></span></div>
+        <h3><i class="number number3"></i><span>请输入人物描述</span></h3>
+
+        <div class=dec><i>每行最多18个字</i>
+
+            <div>
+                <div class=dec_style><input type=radio name=style id=type_a value=1 checked> <b>能…还能…</b> <label
+                        for=type_a></label></div>
+                <div class=dec_style><input type=radio name=style id=type_b value=2> <b>会…还会…</b> <label
+                        for=type_b></label></div>
+            </div>
+            <div class=dec_input><input type=text name=word[] class="dec_text default" value=能 autocomplete=off></div>
+            <div class=dec_input><input type=text name=word[] class="dec_text default" value=能 autocomplete=off></div>
+            <div class=dec_input><input type=text name=word[] class="dec_text default" value=能 autocomplete=off></div>
+            <div class=dec_input><input type=text name=word[] class="dec_text default" value=能 autocomplete=off></div>
+            <div class=dec_input><input type=text name=word[] class="dec_text default" value=能 autocomplete=off></div>
+            <div class=dec_input><input type=text name=word[] class="dec_text default" value=能 autocomplete=off></div>
+            <div class=dec_input><input type=text name=word[] class="dec_text default" value=能 autocomplete=off></div>
+            <div class=dec_input><input type=text name=word[] class="dec_text default" value=能 autocomplete=off></div>
+            <div class=dec_input><input type=text name=word[] class="dec_text default" value=还能 autocomplete=off></div>
+            <div class="dec_input name">
+                <div class=gender>他</div>
+                <input type=text name=identity class=dec_text autocomplete=off>
+
+                <div class=gender_list>
+                    <div><input type=radio name=gender id=boy checked value=1> <b>他</b> <label for=boy></label></div>
+                    <div><input type=radio name=gender id=girl value=2> <b>她</b> <label for=girl></label></div>
+                    <div><input type=radio name=gender id=obj value=3> <b>它</b> <label for=obj></label></div>
+                </div>
+            </div>
+        </div>
+        <input type=hidden id=image_file name=image_file> <input type=hidden id=image_x name=x> <input type=hidden
+                                                                                                       id=image_y
+                                                                                                       name=y> <input
+                type=hidden id=image_width name=width> <input type=hidden id=image_height name=height></form>
+</div>
+<div class=generate_btn><a href=javascript:; class=m_btn id=generate_btn><span class=txt>生成海报</span> <i
+        class=m_b_lf></i><i class=m_b_rt></i></a> <a href=javascript:; class="m_btn hidden" id=submit_loading><span
+        class=txt></span> <i class=m_b_lf></i><i class=m_b_rt></i> <span class=txtloading><img
+        src=http://static.smartisanos.cn/marketing/piaoliang/proudm/asset1441618931844/img/loading-1.png
+        class=loading_icon>海报生成中…</span></a></div>
+<canvas id=crop_workplace class=hidden></canvas>
+<div class="loading_layer hidden"></div>
+<canvas id=workplace class=hidden></canvas>
+<img src=http://static.smartisanos.cn/marketing/piaoliang/proudm/asset1441618931844/img/sample.png class=hidden
+     id=img_sample> <img src=http://static.smartisanos.cn/marketing/piaoliang/proudm/asset1441618931844/img/zoom_bg.png
+                         class=hidden id=img_crop_zoom_bg> <img
+        src=http://static.smartisanos.cn/marketing/piaoliang/proudm/asset1441618931844/img/zoom_handle.png class=hidden
+        id=img_crop_zoom_handle>
+<script src=//res.wx.qq.com/open/js/jweixin-1.0.0.js></script>
+<script src="./js/main100.js"></script>
+
+</body>
+</html>
